@@ -3,7 +3,7 @@ OIDC provider
 
 trust and authentication provider
 
-REGION_CODE=us-east-1 CLUSTER_NAME=roboshop3 ACC_ID=522814689958
+REGION_CODE=us-east-1 CLUSTER_NAME=roboshop ACC_ID=816817860311
 
 eksctl utils associate-iam-oidc-provider \
     --region $REGION_CODE \
