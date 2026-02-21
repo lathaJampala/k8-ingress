@@ -51,7 +51,7 @@ metadata:
   name: app2
   annotations:
     alb.ingress.kubernetes.io/listen-ports: '[{"HTTPS": 443}]'
-    alb.ingress.kubernetes.io/certificate-arn: arn:aws:acm:us-east-1:816817860311:certificate/9b249aff-c97f-46e4-a4fa-d08d0ce2459f
+    alb.ingress.kubernetes.io/certificate-arn: arn:aws:acm:us-east-1:816817860311:certificate/733b14f5-bbd8-410f-9268-1b366dba43b9
     alb.ingress.kubernetes.io/scheme: internet-facing
     alb.ingress.kubernetes.io/target-type: ip
     alb.ingress.kubernetes.io/group.name: joindevops
