@@ -33,6 +33,24 @@ eksctl create iamserviceaccount \
 --region $REGION_CODE \
 --approve
 
+This is for secret reader
+
+eksctl create iamserviceaccount \
+--cluster=$CLUSTER_NAME \
+--namespace=roboshop \
+--name=roboshop-mysql-secret-reader \
+--attach-policy-arn=arn:aws:iam::816817860311:policy/RoboshopMYSQLSECRETReader \
+--override-existing-serviceaccounts \
+--region $REGION_CODE \
+--approve
+
+after exec you can enter this
+aws secretsmanager get-secret-value --secret-id roboshop/mysql/password
+
+if you want to create service account through yaml you can use this command
+kubectl get sa roboshop-mysql-secret-reader -o yaml
+
+
 Install Load balancer controller drivers
 
 helm repo add eks https://aws.github.io/eks-charts
