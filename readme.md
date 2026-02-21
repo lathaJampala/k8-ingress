@@ -50,6 +50,12 @@ aws secretsmanager get-secret-value --secret-id roboshop/mysql/password
 if you want to create service account through yaml you can use this command
 kubectl get sa roboshop-mysql-secret-reader -o yaml
 
+if you want to see only password
+aws secretsmanager get-secret-value \
+  --secret-id roboshop/mysql/password \
+  --query 'SecretString' \
+  --output text
+
 
 Install Load balancer controller drivers
 
